@@ -23,4 +23,4 @@ export const ContextProvider = ({children}) => {
         </StateContext.Provider>
     )
 }
-export const useStateContext= () => (StateContext);
+export const useStateContext= () => useContext (StateContext);
