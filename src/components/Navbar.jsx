@@ -10,13 +10,22 @@ import avatar from '../data/avatar.jpg';
 import {Cart, Chat, Notification, UserProfile} from '.';
 import {useStateContext} from '../contexts/ContextProvider';
 
+const NavButton = ({title, customFunc, icon, color, dotColor}) => (
+  <TooltipComponent content={title}
+  position="BottomCenter">
+    <button></button>
+  </TooltipComponent>
+)
 
 const Navbar = () => {
   const {activeMenu, setActiveMenu} =
   useStateContext();
   
   return (
-    <div>Navbar</div>
+    <div className="flex justify-between p-2 md:mx-6 relative">
+      <NavButton title="Menu" customFunc={() => 
+     setActiveMenu((prevActiveMenu) =>!prevActiveMenu)} color="blue" icon={<AiOutlineMenu/>}/>
+    </div>
   )
 }
 
