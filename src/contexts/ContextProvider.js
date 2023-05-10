@@ -12,6 +12,8 @@ const initialState = {
 export const ContextProvider = ({children}) => {
     const [activeMenu, setActiveMenu] = useState(true);
 
+    useState 
+
     return (
         <StateContext.Provider
         value={{ 
